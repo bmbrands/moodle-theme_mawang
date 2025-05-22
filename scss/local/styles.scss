@@ -1,0 +1,197 @@
+.inpage-drawer {
+    display: none;
+}
+
+#page-course-view-mawang .inpage-drawer {
+    display: block;
+    width: 288px;
+    min-width: 288px;
+    .drawercontent {
+        z-index: auto;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #page-course-view-mawang .inpage-drawer {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .path-course-view {
+        .drawer.drawer-right {
+            display: none;
+        }
+        .drawer-right-toggle {
+            display: none;
+        }
+        #page.drawers.show-drawer-right {
+            margin-right: 0;
+        }
+    }
+}
+
+.activityname a {
+    color: $body-color;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.activity-item .activity-icon {
+    background-color: #e9ecff;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 45px;
+    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
+}
+.mawang-extra {
+    padding: 0 1rem;
+    height: 38.5px;
+    min-height: 38.5px;
+    .mawang-progress {
+        background-color: $purple-700;
+    }
+}
+.alert-info {
+    background-color: $purple-100;
+    border-color: $purple-100;
+    color: $body-color;
+    .iconwrapper {
+        background-color: $purple-800;
+        border-color: $purple-800;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+    }
+}
+#page-header #page-navbar {
+    margin-bottom: 1.5rem;
+}
+.page-header-headings {
+    margin: 2rem 0;
+}
+
+body.has-customfields-tab {
+    .inpage-drawer {
+        display: none;
+    }
+}
+
+.btn {
+    font-weight: 600;
+}
+.btn-outline-secondary {
+    color: $purple-700;
+}
+
+.region_main_settings_menu_proxy {
+    display: none;
+}
+
+#region-main-settings-menu .action-menu.moodle-actionmenu {
+    .dropdown {
+        position: static;
+    }
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $purple-100;
+        &:hover,
+        &:focus {
+            background-color: $purple-200;
+            color: $purple-700;
+        }
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
+    .dropdown-toggle > .icon {
+        font-size: 1.5rem;
+        color: $purple-700;
+    }
+}
+
+#region-main-settings-menu  > div {
+    margin: 8px 22px;
+}
+
+#user-notifications {
+    margin: 0 15px;
+}
+
+#page-mod-forum-index {
+    .generaltable td[colspan="6"] {
+       display: none;
+    }
+}
+
+.forumpost {
+    border-radius: $border-radius;
+}
+
+.icon.text-info {
+    color: $purple-700 !important;
+}
+
+.path-mod .page-header-image,
+.path-mod .page-header-headings .text-muted {
+    display: none;
+}
+.path-mod-page div[role="main"] h3 {
+    margin-bottom: 1.5rem;
+}
+.path-mod-video {
+    .activity-description {
+        padding: 0;
+        .no-overflow > p {
+            margin: 0;
+        }
+    }
+    .mediaplugin {
+        margin: 0;
+        & > div {
+            max-width: 100% !important;
+        }
+    }
+    #page.drawers .activity-header {
+        margin: 0 1rem;
+        padding: 0;
+    }
+}
+
+.path-mod #page.drawers .activity-header {
+    padding: 0;
+    background-color: $white;
+    .badge.bg-light {
+        background-color: #f2fbfb !important;
+        padding: 0.7rem;
+    }
+}
+.path-mod .activity-information .completion-info {
+    border: 0;
+}
+
+.breadcrumb-item {
+    span {
+        color: $gray-500;
+    }
+    a {
+        font-weight: 600;
+    }
+}
+
+blockquote {
+    margin: 0 0.5rem 1rem;
+    padding-left: 1rem;
+    color: $body-color;
+    border-left: 5px solid $purple-700;
+}

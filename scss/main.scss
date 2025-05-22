@@ -1,0 +1,23 @@
+// Import FontAwesome.
+@import "fontawesome";
+
+// variables
+@import "local/variables";
+
+// fonts
+@import "local/fonts";
+
+// Import All of Bootstrap
+@import "bootstrap";
+
+// Import Core moodle CSS
+@import "moodle";
+
+// Styles
+@import "local/styles";
+
+// Inpage blocks
+@import "local/blocks";
+
+// Overrides
+@import "local/overrides";

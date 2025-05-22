@@ -1,0 +1,92 @@
+@include media-breakpoint-up(sm) {
+    #page.drawers .main-inner {
+        margin-top: 1.5rem;
+    }
+}
+
+.drawer.drawer-left {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.drawer.drawer-right {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@include media-breakpoint-up(md) {
+
+    #page-wrapper {
+        height: auto;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: $blue-500;
+            z-index: -1;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 264px;
+            background-color: $purple-900;
+            z-index: -2;
+        }
+        .pagebg {
+            background-color: $gray-100;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            z-index: -3;
+        }
+    }
+
+    // Add some padding for the drawer toggle buttons
+    #page.drawers {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        .main-inner {
+            padding: 1rem 2rem;
+        }
+        div[role="main"] {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .drawer-left,
+    .drawer-right {
+        top: $navbar-height + 24px;
+        height: calc(100vh - #{$navbar-height} - 24px);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #page-wrapper #page {
+        min-height: calc(100vh - #{$navbar-height});
+    }
+    .path-course-view-section.format-mawang #page-wrapper #page,
+    .path-mod.format-mawang #page-wrapper #page {
+        #page-content,
+        #page-header {
+            max-width: $page-mod-maxwidth;
+            margin: 0 auto;
+        }
+    }
+}

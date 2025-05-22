@@ -1,0 +1,169 @@
+// Bootstrap variables
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #8f959e !default;
+$gray-600: #6a737b !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #1d2125 !default;
+$black:    #000 !default;
+
+$blue:    #0f6cbf !default;
+$indigo:  #6610f2 !default;
+$purple:  #613d7c !default;
+$pink:    #e83e8c !default;
+$red:     #ca3120 !default;
+$orange:  #f0ad4e !default;
+$yellow:  #ff7518 !default;
+$green:   #357a32 !default;
+$teal:    #20c997 !default;
+$cyan:    #008196 !default;
+
+$purple-900: #3C1366;
+$purple-800: #523E7B;
+$purple-700: #5331A3;
+$purple-500: #7448D1;
+$purple-300: #A37CFA;
+$purple-200: #C8C2FC;
+$purple-100: #EEF0FF;
+$purple-50: #F0EFF5;
+
+$container-bg: #f8f8f8 !default;
+
+// CAIE colors
+$blue-900: #133844 !default;
+$blue-500: #00BDB6 !default;
+$blue-300: #8EE8D8 !default;
+$blue-100: #D7FDF5 !default;
+
+$boost: #0F6CBF !default;
+
+$primary:       $blue !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $orange !default;
+$danger:        $red !default;
+$secondary:     $gray-400 !default;
+
+$info-outline:    #1f7e9a;
+$warning-outline: #a6670e;
+
+
+// Options
+$enable-responsive-font-sizes: true !default;
+
+// Body
+$body-color:    $gray-900 !default;
+
+$font-size-base: 0.9375rem !default;
+$rfs-base-font-size: 0.9rem !default;
+$headings-font-weight:   700 !default;
+$headings-font-family: "Open Sans" !default;
+$font-family-sans-serif: "Open Sans" !default;
+
+// Source sans pro
+// $headings-font-family: 'Source Sans Pro', sans-serif !default;
+// $font-family-sans-serif: 'Source Sans Pro', sans-serif !default;
+
+// Navbar
+$navbar-dark-hover-color:           rgba($white, 1) !default;
+$navbar-light-color:                rgba($black, 0.6) !default;
+$navbar-light-hover-color:          rgba($black, .9) !default;
+
+// Breadcrumbs
+$breadcrumb-padding-y:              .5rem !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding:           .5rem !default;
+$breadcrumb-margin-bottom:          0 !default;
+$breadcrumb-bg:                     transparent !default;
+$breadcrumb-divider: "/" !default;
+$breadcrumb-divider-rtl: "/" !default;
+
+// Alerts
+$alert-border-width:                0 !default;
+
+$card-group-margin: .25rem;
+
+// Toasts
+$toast-color:                       $white !default;
+$toast-background-color:            rgba($gray-900, .95) !default;
+$toast-header-color:                $gray-100 !default;
+$toast-header-background-color:     rgba($white, .1) !default;
+
+// Custom control size
+$custom-control-indicator-size: 1.25rem;
+
+$input-btn-focus-color: rgba($primary, .75) !default;
+
+$input-border-color: #d1d5db !default;
+
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: $primary;
+
+$popover-max-width: 300px !default;
+
+$border-radius: .5rem !default;
+$border-radius-lg: .6rem !default;
+
+$primary:       $purple-800;
+$secondary:     $gray-200;
+$success:       #96cc64;
+$info:          #0071bc;
+$warning:       #f0c418;
+$danger:        rgb(238, 71, 146);
+$light:         #eaeaea;
+$dark:          $gray-800 !default;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+    (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+    ),
+    $theme-colors
+);
+
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2),
+    6: ($spacer * 3)
+) !default;
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+$activity-icon-collaboration-filter:
+    invert(25%) sepia(54%) saturate(6226%) hue-rotate(279deg) brightness(100%) contrast(102%);
+$primary-light-background: rgba(149, 45, 152, 0.1);
+$courseindex-item-page-bg: rgba(149, 45, 152, 0.1);
+$courseindex-link-color-selected: #952D98;
+$moremenu-height: 45px;
+$course-content-maxwidth: 100%;
+$page-mod-maxwidth: 900px;
+$course-section-maxwidth: 900px;
+$card-border-width:                 0;
+$btn-border-radius: 0.3rem !default;
+$table-accent-bg: rgba($white, .03);
+$card-border-color:                 transparent;
+$card-inner-border-radius:          0;
+
+$navbar-height: 45px;
+$drawer-right-width: 315px;
+$drawer-left-width: 270px !default;
+$enable-rounded: true !default;
+$input-btn-line-height: 1.3 !default;
