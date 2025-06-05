@@ -116,16 +116,18 @@
     display: none;
 }
 
-.path-mod.fakeblocksonly {
-    .drawer-right-toggle {
+@include media-breakpoint-up(lg) {
+    .path-mod.fakeblocksonly {
+        .drawer-right-toggle {
+            display: none;
+        }
+        #page.drawers.show-drawer-right {
+            margin-right: 0;
+        }
+    }
+    .path-mod #block-region-side-pre .block_fake {
         display: none;
     }
-    #page.drawers.show-drawer-right {
-        margin-right: 0;
-    }
-}
-.path-mod #block-region-side-pre .block_fake {
-    display: none;
 }
 
 #page-course-view-mawang .inpage-drawer {
