@@ -89,4 +89,89 @@
             margin: 0 auto;
         }
     }
+    // Exception for pdf viewer
+    #page-mod-resource-view.path-mod.format-mawang #page-wrapper #page {
+        #page-content {
+            max-width: 100%;
+            margin: 0 auto;
+            .course-content-footer {
+                max-width: $page-mod-maxwidth;
+                margin: 0 auto;
+            }
+        }
+    }
+    #page-mod-forum-view.path-mod.format-mawang #page-wrapper #page {
+        #page-content {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.inpage-drawer {
+    display: none;
+}
+
+.inpage-fakeblocks {
+    display: none;
+}
+
+.path-mod.fakeblocksonly {
+    .drawer-right-toggle {
+        display: none;
+    }
+    #page.drawers.show-drawer-right {
+        margin-right: 0;
+    }
+}
+.path-mod #block-region-side-pre .block_fake {
+    display: none;
+}
+
+#page-course-view-mawang .inpage-drawer {
+    display: block;
+    width: 288px;
+    min-width: 288px;
+    .drawercontent {
+        z-index: auto;
+    }
+}
+#page-course-view-mawang.has-customfields-tab .inpage-drawer {
+    display: none;
+}
+
+@include media-breakpoint-up(lg) {
+    .path-mod .inpage-fakeblocks {
+        display: block;
+        width: 250px;
+        min-width: 250px;
+    }
+}
+
+// Add a custom breakpoint for 1400px and up
+@media (min-width: 1400px) {
+    .path-mod .inpage-fakeblocks {
+        transform: translateX(-250px);
+        position: absolute;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #page-course-view-mawang .inpage-drawer {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .path-course-view {
+        .drawer.drawer-right {
+            display: none;
+        }
+        .drawer-right-toggle {
+            display: none;
+        }
+        #page.drawers.show-drawer-right {
+            margin-right: 0;
+        }
+    }
 }

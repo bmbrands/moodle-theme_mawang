@@ -1,35 +1,4 @@
-.inpage-drawer {
-    display: none;
-}
 
-#page-course-view-mawang .inpage-drawer {
-    display: block;
-    width: 288px;
-    min-width: 288px;
-    .drawercontent {
-        z-index: auto;
-    }
-}
-
-@include media-breakpoint-down(md) {
-    #page-course-view-mawang .inpage-drawer {
-        display: none;
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    .path-course-view {
-        .drawer.drawer-right {
-            display: none;
-        }
-        .drawer-right-toggle {
-            display: none;
-        }
-        #page.drawers.show-drawer-right {
-            margin-right: 0;
-        }
-    }
-}
 
 .activityname a {
     color: $body-color;
@@ -194,4 +163,26 @@ blockquote {
     padding-left: 1rem;
     color: $body-color;
     border-left: 5px solid $purple-700;
+}
+
+.filemanager {
+    .fp-restrictions {
+        border-top: 1px solid $input-border-color;
+        border-left: 1px solid $input-border-color;
+        border-right: 1px solid $input-border-color;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
+    }
+    .fp-navbar {
+        border-left: 1px solid $input-border-color;
+        border-right: 1px solid $input-border-color;
+        padding: 0 0.5rem;
+        border-radius: 0;
+    }
+}
+
+body .tox-tinymce {
+    border-width: 1px;
+    border-color: $input-border-color;
 }

@@ -136,6 +136,11 @@
             {{/secondarymoremenu}}
             {{{ output.full_header }}}
             <div id="page-content" class="d-flex pb-3 d-print-block">
+                {{#fakeblockshtml}}
+                    <div class="inpage-fakeblocks d-print-none">
+                        {{{ fakeblockshtml }}}
+                    </div>
+                {{/fakeblockshtml}}
                 <div class="flex-fill" id="region-main-box">
                     {{#hasregionmainsettingsmenu}}
                     <div id="region-main-settings-menu" class="d-print-none">
@@ -167,7 +172,7 @@
                 {{#hasblocks}}
                     {{< theme_boost/drawer }}
                         {{$id}}theme_boost-drawers-blocks{{/id}}
-                        {{$drawerclasses}}inpage-drawer{{#blockdraweropen}} show{{/blockdraweropen}}{{/drawerclasses}}
+                        {{$drawerclasses}}inpage-drawer{{/drawerclasses}}
                         {{$drawercontent}}
                             <div class="d-print-none">
                                 <div data-region="mawang-extra" class="mawang-extra">

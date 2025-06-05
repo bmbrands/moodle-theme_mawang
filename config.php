@@ -55,7 +55,7 @@ $THEME->layouts = [
         'options' => array('langmenu' => true),
     ),
     'incourse' => array(
-        'file' => 'drawers.php',
+        'file' => 'course.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),

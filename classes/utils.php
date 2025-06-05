@@ -16,6 +16,9 @@
 
 namespace theme_mawang;
 use completion_info;
+use core_block\output\block_contents;
+use core_block\output\block_move_target;
+use core\exception\coding_exception;
 
 /**
  * Class mawang
@@ -88,6 +91,10 @@ class utils {
      */
     private static function render_section_progress($sectionid, $courseid, $progress) {
         global $PAGE, $OUTPUT;
+        if ($PAGE->user_is_editing()) {
+            // Do not show progress bar in editing mode.
+            return;
+        }
 
         $progressbar = $OUTPUT->render_from_template('format_mawang/local/content/progress', [
             'sectionid' => $sectionid,
@@ -142,4 +149,37 @@ class utils {
         }
         return $percentage;
     }
+
+    /**
+     * Check if the current page uses fake blocks only.
+     * This is used to determine if we should show the block drawer
+     * @return bool
+     */
+    public static function is_fake_blocks_only(): bool {
+        global $PAGE, $OUTPUT;
+
+        if ($PAGE->user_is_editing()) {
+            return false;
+        }
+
+        // If the page has no blocks, we assume it uses fake blocks only.
+        if (!$PAGE->blocks->get_regions()) {
+            return false;
+        }
+
+        $blockcontents = $PAGE->blocks->get_content_for_region('side-pre', $OUTPUT);
+        $numfake = 0;
+        $numreal = 0;
+        foreach ($blockcontents as $bc) {
+            if ($bc instanceof block_contents) {
+                if ($bc->is_fake()) {
+                    $numfake++;
+                } else {
+                    $numreal++;
+                }
+            }
+        }
+        return $numfake > 0 && $numreal == 0;
+    }
+
 }

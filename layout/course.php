@@ -46,10 +46,19 @@ $extraclasses = ['uses-drawers'];
 if ($courseindexopen) {
     $extraclasses[] = 'drawer-open-index';
 }
-
+$fakeblockshtml = $OUTPUT->blocks_for_region('side-pre', true);
+$fakeblocksonly = \theme_mawang\utils::is_fake_blocks_only();
+if ($fakeblocksonly) {
+    $extraclasses[] = 'fakeblocksonly';
+}
+$hasblocks = false;
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = (strpos($blockshtml, 'data-block=') !== false || !empty($addblockbutton));
 if (!$hasblocks) {
+    $blockdraweropen = false;
+}
+if ($fakeblocksonly) {
+    // If we are only showing fake blocks, then we don't have real blocks.
     $blockdraweropen = false;
 }
 $courseindex = core_course_drawer();
@@ -58,8 +67,6 @@ if (!$courseindex) {
 }
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
-$forceblockdraweropen = $OUTPUT->firstview_fakeblocks();
-
 $secondarynavigation = false;
 $overflow = '';
 if ($PAGE->has_secondary_navigation()) {
@@ -72,6 +79,7 @@ if ($PAGE->has_secondary_navigation()) {
             continue;
         }
         $catname = $data->get_field()->get_category()->get('name');
+        $currenttab = optional_param('tab', 0, PARAM_INT);
         $nodeproperties = [
             'text' => $catname,
             'shorttext' => urlencode($catname),
@@ -81,6 +89,12 @@ if ($PAGE->has_secondary_navigation()) {
         ];
         $node = new navigation_node($nodeproperties);
         $PAGE->secondarynav->add_node($node);
+        if ($currenttab == $catid) {
+            if ($coursenode = $PAGE->secondarynav->find('coursehome', null)) {
+                $coursenode->make_inactive();
+            }
+            $node->make_active();
+        }
         $categories[] = $catid;
     }
     $tablistnav = $PAGE->has_tablist_secondary_navigation();
@@ -119,13 +133,15 @@ $templatecontext = [
     'mobileprimarynav' => $primarymenu['mobileprimarynav'],
     'usermenu' => $primarymenu['user'],
     'langmenu' => $primarymenu['lang'],
-    'forceblockdraweropen' => $forceblockdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'overflow' => $overflow,
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
     'progress' => $progress,
+    'sectionprogress' => $sectionprogress,
+    'fakeblockshtml' => $fakeblockshtml,
+    'fakeblocksonly' => $fakeblocksonly,
 ];
 
 echo $OUTPUT->render_from_template('theme_mawang/course', $templatecontext);
