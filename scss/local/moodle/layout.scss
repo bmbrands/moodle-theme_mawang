@@ -89,7 +89,8 @@
             margin: 0 auto;
         }
     }
-    // Exception for pdf viewer
+    // Exceptions for specific views
+    #page-mod-assign-grading.path-mod.format-mawang #page-wrapper #page,
     #page-mod-resource-view.path-mod.format-mawang #page-wrapper #page {
         #page-content {
             max-width: 100%;
