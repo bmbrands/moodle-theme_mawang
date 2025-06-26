@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component    = 'theme_mawang';
 $plugin->release      = '1.0';
-$plugin->version      = 2025061800;
+$plugin->version      = 2025062600;
 $plugin->requires     = 2024100700;
 $plugin->supported    = [405, 405];
 $plugin->maturity     = MATURITY_STABLE;
