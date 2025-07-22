@@ -88,6 +88,9 @@
             max-width: $page-mod-maxwidth;
             margin: 0 auto;
         }
+        #region-main-settings-menu {
+            max-width: $page-mod-maxwidth;
+        }
     }
     // Exceptions for specific views
     #page-mod-assign-grading.path-mod.format-mawang #page-wrapper #page,
@@ -104,7 +107,8 @@
     #page-mod-forum-index.path-mod.format-mawang #page-wrapper #page,
     #page-mod-forum-post.path-mod.format-mawang #page-wrapper #page,
     #page-mod-forum-discuss.path-mod.format-mawang #page-wrapper #page,
-    #page-mod-forum-view.path-mod.format-mawang #page-wrapper #page {
+    #page-mod-forum-view.path-mod.format-mawang #page-wrapper #page,
+    #page-mod-marker-view.path-mod.format-mawang #page-wrapper #page {
         #page-content {
             max-width: 100%;
             margin: 0 auto;
@@ -112,6 +116,9 @@
         #page-header {
             max-width: 100%;
             margin: 0 auto;
+        }
+        #region-main-settings-menu {
+            max-width: 100%;
         }
     }
 }
