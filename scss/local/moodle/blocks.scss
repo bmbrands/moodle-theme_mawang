@@ -1,0 +1,16 @@
+@include media-breakpoint-up(sm) {
+    #region-main-settings-menu {
+        position: relative;
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #region-main-settings-menu > div {
+        position: relative;
+        right: 0;
+        z-index: 100;
+        margin: 1rem;
+    }
+}
